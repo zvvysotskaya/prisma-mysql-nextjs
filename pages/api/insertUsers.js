@@ -6,7 +6,7 @@ export default function handler(req, res) {
   
     const prisma = new PrismaClient()
    
-    main()
+main()
   .then(async () => {
     await prisma.$disconnect()
   })

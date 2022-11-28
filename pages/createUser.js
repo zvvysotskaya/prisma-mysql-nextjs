@@ -4,9 +4,11 @@ import styles from '../styles/Home.module.css'
 
 
 export default function CreateUser(){
-//     const prisma = new PrismaClient()
+
 const [name, setName]=useState('')
+
     const handleCreateUser=(e)=>{
+
         e.preventDefault()
 
         let data={
@@ -27,17 +29,17 @@ const [name, setName]=useState('')
           });
     }    
         
-    return(<><main className={styles.main}>
+    return(<>
+    <main className={styles.main}>
         <h1>Create a New User</h1>        
         <input 
         tytpe='text' 
         name='name'
         value={name} 
-        onChange={(e)=>setName(e.target.value)}/><br/>
+        onChange={(e)=>setName(e.target.value)}/>
+        <br/>
         <button onClick={handleCreateUser}>Create User</button><br/><br/>
-        <Link href='/'>Go Home</Link>
-
-    </main>
-    
+        <Link href='/'className={styles.linkColor}>Go Home to check your work!</Link>
+    </main>    
     </>)
 }

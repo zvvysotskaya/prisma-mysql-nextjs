@@ -69,20 +69,23 @@ export default function Home(props) {
       </Head>
 
       <main className={styles.main}>
+
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
+
         <h1>Mysql and Prisma</h1>
+
         <h1>List of my users</h1>
 
         <div>
-          <Link href='/createUser'>Create a new User or a post</Link>
+          <Link href='/createUser' className={styles.linkColor}>Create a new User or a post</Link>
         </div>
+        
           <h1>Names:</h1>
           <ul>
             {arr?.map((e,i)=><li key={i}>{e?.name}</li>)}
-          </ul>
-       
+          </ul>       
       </main>
 
       <footer className={styles.footer}>
